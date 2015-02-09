@@ -2,7 +2,7 @@
 
 markdown: kramdown
 permalink: pretty
-highlighter: rouge
+highlighter: pygments
 
 port: 8080
 
