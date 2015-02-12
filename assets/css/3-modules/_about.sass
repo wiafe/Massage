@@ -1,0 +1,106 @@
+h3
+	@extend %small-bold
+	color: $section-header
+	text-align: center
+	padding: -40px 0 20px 0
+	font-size: 70px
+	font-weight: 900
+
+.propic
+	max-width: 780px
+	+display(flex)
+	margin: 0 auto
+	//
+	+align-items(center)
+	+justify-content(space-around)
+
+	.face-img
+		background: url(../img/propic.jpg) center
+		background-size: cover
+		+size(200px)
+		border-radius: 50%
+		order: 3
+
+		// Setting orders!
+	[class^="icon-"]
+		+size(100px)
+		background: $icon-background
+		border-radius: 50%
+
+		&.icon-controller
+			order: 1
+
+		&.icon-massage
+			order: 2
+
+		&.icon-mouse
+			order: 4
+
+		&.icon-pencil
+			order: 5
+
+@media screen and (max-width: 680px)
+	//collasping the icons and pushing pic up
+	.propic
+		display: block
+		text-align: center
+
+		div
+			display: inline-block
+
+		.face-img
+			display: block
+			background:
+				position: center center
+				repeat: no-repeat
+			width: 100
+			margin: 0 auto
+
+		[class^="icon-"]
+			margin: 10px
+
+
+
+.about
+	max-width: 620px
+	text-align: center
+	// background: pink
+	padding: 0 15px
+	margin: 50px auto
+	font-size: 24px
+	font-weight: 500
+
+.skills
+	// background: pink
+	max-width: 700px
+	margin: 50px auto
+	@extend %small-bold
+	color: $skills-color
+	+clearfix
+
+	.skill-unit
+		width: 350px
+		float: left
+
+	.skill-icon
+		// Using font-size zero here to fix inline block
+		font-size: 0
+		margin: 2px 0 30px
+
+		span 
+			display: inline-block
+			+size(14px)
+			background: $text-color
+			margin-right: 5px 
+			border-radius: 50%
+
+			&:after
+				content: ''
+				display: block
+				+size(10px)
+				background: $bg-color 
+				border-radius: 50%
+				margin: 2px
+
+		&.rating-8 span:nth-child(n+9):after
+			background: $text-color
