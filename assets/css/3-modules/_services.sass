@@ -1,9 +1,47 @@
 .services
-	height: 100%
-	background: $section-header
-	color: $text-color
-
+	+clearfix 
+	background: rgba(39, 174, 96, 1.0)
 	h3
-		text-align: center
 		color: $text-color
-		@extend %small-bold
+		padding: 9px 496px
+
+
+		.arrow-up
+			width: 0 
+			height: 0
+			border-left: 5px solid transparent
+			border-right: 5px solid transparent
+			border-bottom: 5px solid black
+			float: right
+			margin-top: 44px
+
+
+	.service-list
+		+clearfix
+		
+		.service-lockup
+			max-width: 700px
+			margin: 20px auto
+			
+
+			.service-img
+				background: url(../img/deeptissue.jpg) center center
+				background:
+					size: cover
+				+size(100px)
+				float: left
+				margin-right: 10px
+				border-radius: 50%
+
+			.ex-two
+				margin: 0 auto
+				color: $text-color
+				
+
+			.massage-type
+				margin: 0 auto
+				
+	@media screen and (max-width: 680px)
+		.service-lockup
+			padding: 0 1.5em 0 1.5em
+

@@ -1,10 +1,5 @@
-h3
-	@extend %small-bold
-	color: $section-header
-	text-align: center
-	padding: -40px 0 20px 0
-	font-size: 70px
-	font-weight: 900
+section
+	border-top: 2px solid $text-color
 
 .propic
 	max-width: 780px
@@ -12,10 +7,10 @@ h3
 	margin: 0 auto
 	//
 	+align-items(center)
-	+justify-content(space-around)
+	+justify-content(space-between)
 
 	.face-img
-		background: url(img/propic.jpg) center
+		background: url(../img/propic.jpg) center
 		background-size: cover
 		+size(200px)
 		border-radius: 50%
@@ -28,16 +23,16 @@ h3
 		border-radius: 50%
 
 		&.icon-controller
-			order: 1
+			+order(1)
 
 		&.icon-massage
-			order: 2
+			+order(2)
 
 		&.icon-mouse
-			order: 4
+			+order(4)
 
 		&.icon-pencil
-			order: 5
+			+order(5)
 
 @media screen and (max-width: 680px)
 	//collasping the icons and pushing pic up
@@ -72,35 +67,42 @@ h3
 
 .skills
 	// background: pink
-	max-width: 700px
-	margin: 50px auto
+	max-width: 540px
+	margin: 100px auto
+	padding: 0 1.5em 0 5.5em
 	@extend %small-bold
 	color: $skills-color
 	+clearfix
 
 	.skill-unit
-		width: 350px
+		width: 250px
 		float: left
 
-	.skill-icon
-		// Using font-size zero here to fix inline block
-		font-size: 0
-		margin: 2px 0 30px
+		.skill-icon
+			// Using font-size zero here to fix inline block
+			font-size: 0
+			margin: 2px 0 30px
 
-		span 
-			display: inline-block
-			+size(14px)
-			background: $text-color
-			margin-right: 5px 
-			border-radius: 50%
-
-			&:after
-				content: ''
-				display: block
-				+size(10px)
-				background: $bg-color 
+			span 
+				display: inline-block
+				+size(14px)
+				background: $text-color
+				margin-right: 5px 
 				border-radius: 50%
-				margin: 2px
 
-		&.rating-8 span:nth-child(n+9):after
-			background: $text-color
+				&:after
+					content: ''
+					display: block
+					+size(10px)
+					background: $bg-color 
+					border-radius: 50%
+					margin: 2px
+
+
+			@for $i from 1 through 11
+				&.rating-#{$i} span:nth-child(n+#{$i + 1}):after
+					background: $accent-color
+
+@media screeen and (max-width: 541px)
+	.skills
+		width: 270px
