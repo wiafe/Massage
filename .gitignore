@@ -1,3 +1,6 @@
+_site
+.sass-cache
+
 ### OSX ###
 .DS_Store
 .AppleDouble
