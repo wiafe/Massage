@@ -259,12 +259,13 @@ header {
     text-decoration: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 10px;
-    padding-top: 110px; }
+    padding-top: 110px;
+    text-transform: uppercase; }
     header h1 span {
       display: inline-block;
       padding: 0.2em 0.3em;
       border: rgba(211, 84, 0, 0.8) solid 10px;
-      border-radius: 20px 50px 10px 50px; }
+      border-radius: 60px; }
   header .kicker {
     text-align: center;
     letter-spacing: 0.05em;
@@ -461,7 +462,8 @@ section {
   .skills {
     width: 270px; } }
 .services {
-  background: #27ae60; }
+  background: #27ae60;
+  padding-bottom: 50px; }
   .services:after {
     content: "";
     display: table;
