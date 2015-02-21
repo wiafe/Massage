@@ -402,7 +402,7 @@ section {
   text-align: center;
   padding: 0 15px;
   margin: 50px auto;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 500; }
 
 .skills {
@@ -502,5 +502,5 @@ h3 {
   color: #27ae60;
   text-align: center;
   padding: -40px 0 20px 0;
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: 900; }
