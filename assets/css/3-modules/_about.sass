@@ -11,7 +11,7 @@ section
 	+justify-content(space-between)
 
 	.face-img
-		background: url(img/propic.jpg) center
+		background: url(../img/propic.jpg) center
 		background-size: cover
 		+size(200px)
 		border-radius: 50%
@@ -63,8 +63,9 @@ section
 	// background: pink
 	padding: 0 15px
 	margin: 50px auto
-	font-size: 24px
+	font-size: 1.5em
 	font-weight: 500
+	color: $text-color
 
 .skills
 	// background: pink
@@ -72,7 +73,7 @@ section
 	margin: 100px auto
 	padding: 0 1.5em 0 5.5em
 	@extend %small-bold
-	color: $skills-color
+	color: $text-color
 	+clearfix
 
 	.skill-unit
@@ -87,7 +88,7 @@ section
 			span 
 				display: inline-block
 				+size(14px)
-				background: $text-color
+				background: $text-color 
 				margin-right: 5px 
 				border-radius: 50%
 
@@ -95,14 +96,14 @@ section
 					content: ''
 					display: block
 					+size(10px)
-					background: $bg-color 
+					background: $accent-color 
 					border-radius: 50%
 					margin: 2px
 
 
 			@for $i from 1 through 11
 				&.rating-#{$i} span:nth-child(n+#{$i + 1}):after
-					background: $accent-color
+					background: $bg-color
 
 @media screeen and (max-width: 541px)
 	.skills

@@ -1,5 +1,50 @@
 <section class="testimonials">
+
 	<h3 id="testimonial">Testimonials</h3>
+
+	<div class="clients-mobile">
+	{% for clients in site.data.portfolio.clients %}
+		<span></span>
+	{% endfor %}
+	</div>
+
+	
+	<div class="clients-belt">
+
+		{% for clients in site.data.portfolio.clients %}
+		<div class="client-unit">
+
+			<div class="client-pic">
+
+				<img src="assets/img/clients/{{ clients.avatar }}" alt="client-face">
+				<strong class="client-name">{{ clients.name }}</strong>
+				<em class="client-title">{{ clients.title }}</em>
+
+			</div>
+
+			<div class="client-content">
+				<div class="client-quote">{% include icons/quote.html %}</div>
+
+				{{ clients.quote }}
+
+			</div>
+
+		</div>
+		{% endfor %}
+
+	<div class="client-controls">
+
+		<div class="control-next">{% include icons/next.html %}</div>
+		<div class="control-prev">{% include icons/prev.html %}</div>
+
+	</div>
+
+	
+	<div class="clients-logo">
+		{% for clients in site.data.portfolio.clients %}
+		<img class="client-logo" src="/assets/img/clients/{{ clients.logo }}" alt="clients logos">
+		{% endfor %}
+	</div>
 	
 	
 </section>
