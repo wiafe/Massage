@@ -1080,7 +1080,7 @@ form {
       display: block; }
 
 h3 {
-  color: #27ae60;
+  color: rgba(44, 62, 80, 1.0);
   text-align: center;
   padding: -40px 0 20px 0;
   font-size: 2.5em;
