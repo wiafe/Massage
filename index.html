@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/img/favicons/massage.ico">  
   <link rel="stylesheet" href="assets/css/main.css" />
-  <script src="assets/js/jquery-2.1.1.min.js"></script>
-  <script src="assets/js/parallax.js" type="text/javascript"></script>
+  <script src="assets/js/lib/angular.js"></script>
+  <script src="assets/js/controller.js"></script>
 </head>
 <body>
 
@@ -25,10 +25,17 @@
 
 	{% include testimonials.html %}
 
+	<div class="parallax-window" data-parallax="scroll" data-image-src="assets/img/contact.jpg" style="height: 200px; width: auto"></div>
+
+	{% include contact.html %}
+
+	{% include contact-form.html %}
+
 	{% include footer.html %}
 
 <script src="assets/js/jquery-2.1.1.min.js"></script>
-
+<script src="assets/js/parallax.js" type="text/javascript"></script>
 <script src="assets/js/functions.js" type="text/javascript"></script>
+<script src="assets/js/datePicker.js"></script>
 </body>
 </html>
