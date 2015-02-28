@@ -1,0 +1,43 @@
+<section class="contact-form" ng-app = 'form'>
+
+	<h3>Let Me Help You Heal</h3>
+
+	<form method="POST" action="http://formspree.io/wiafe23@gmail.com">
+
+		<div class="contact-info">
+			<label><span>Your Name</span>
+			<input type="text" ng-model="name" name="name"></label>
+
+			<label><span>Your Email</span>
+			<input type="email" name="_replyto"></label>
+		</div>
+
+		<div class="massage-options" ng-app="app">
+			<select ng-model="massage" name="massages">
+				<option value=>Select a Massage</option>
+				<option value="Deep Tissue 55 minute">Deep Tissue 55 minute</option>
+				<option value="Deep Tissue 85 minute">Deep Tissue 85 minute</option>
+				<option value="55 minute Swedish">55 minute Swedish</option>
+				<option value="Deep Tissue with Cryoderm">Deep Tissue with Cryoderm</option>
+			</select>
+			<datepicker date-format="yyy-MM-dd">
+				<input ng-model="date" type="text">
+			</datepicker>
+
+		</div>
+
+
+		<label><span>Hello {[{name}]}, Add Any Addition Instructions </span>
+		<textarea name="message"></textarea></label>
+
+		<div class="preview">
+			<p>Name: {[{name}]}</p>
+			<p>Massage: {[{massage}]}</p>
+			<p>Date&Time:</p>
+		</div>
+
+		<input type="submit" value="Book" >
+	</form>
+
+
+</section>

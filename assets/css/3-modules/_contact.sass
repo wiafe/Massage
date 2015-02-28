@@ -1,0 +1,58 @@
+.contact
+	background: rgba(39, 174, 96, 1.0)
+	text-align: center
+	padding-top: 1px
+
+	h3
+		color: $text-color
+		max-width: 500px
+
+	.social-links
+		max-width: 700px
+		margin: 0 auto 50px
+		+display(flex)
+		+justify-content(space-around)
+		+flex-wrap(wrap)
+
+		a 
+			display: block
+			+size(50px)
+			//text-align: center
+			line-height: 50px
+			color: $text-color
+			border-radius: 50%
+			font-size: 28px
+			+transform(scale())
+
+			&:hover
+				+transform(scale(1.2))
+				color: $selection-color
+	.bar
+		width: 250px
+		height: 0px
+		border-top: 4px solid $bg-color
+		margin: 0px auto 50px
+
+	.emailLink
+		display: inline-block	
+		color: $text-color
+		+transform(scale())
+		font:
+			size: 50px
+			weight: 300
+		line-height: 0.8
+		margin-bottom: 25px
+
+		&:hover
+			color: $selection-color
+			+transform(scale(1.1))
+
+	@media (max-width: 701px)
+		.social-links
+
+			a
+				+display(flex)
+				+justify-content(space-around)
+
+		.emailLink
+			font-size: 25px
